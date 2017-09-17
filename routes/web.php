@@ -16,6 +16,10 @@ use App\Book ;
 
 Route::get('/', function () {
     //
+	// top page
+	// --------------------------------------------------------------------
+	return view('books');
+
 });
 
 Route::post('/book', function (Request $request){
