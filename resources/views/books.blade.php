@@ -44,7 +44,7 @@
 		<div class="form-gruop">
 			<div class="col-sm-offset-3 col-ms-6">
 				<button type="submit" class="btn btn-default">
-					<i class="glyphicon glyphicon-plus"></i> Save
+					<i class="fa fa-plus-square" aria-hidden="true"></i> Save
 				</button>
 			</div>
 		</div>
@@ -73,7 +73,7 @@
 						{{ csrf_field() }}
 
 						<button type="submit" class="btn btn-primary">
-							<i class="glyphicon glyphicon-pencil"></i> Edit
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
 						</button>
 					</form>
 				</td>
@@ -85,7 +85,7 @@
 						{{ method_field('DELETE') }}
 
 						<button type="submit" class="btn btn-danger">
-							<i class="glyphicon glyphicon-trash"></i> delete
+							<i class="fa fa-trash" aria-hidden="true"></i> delete
 						</button>
 					</form>
 				</td>
