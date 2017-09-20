@@ -20,7 +20,7 @@ class BooksController extends Controller
 	public function index( /* Request $request */ ) {
 		$books = Book::where('user_id', Auth::user()->id)
 			->orderBy('created_at', 'desc')
-			->paginate( 3 ) ;
+			->paginate( 10 ) ;
 
 		return view('books', [
 			'books' => $books
