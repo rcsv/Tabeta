@@ -2,6 +2,7 @@
 
 @section('content')
 <!-- Book application top page: start -->
+<h2>Book Database</h2>
 <div class="panel-body">
 	<!-- use for displaying validation error -->
 	@include('common.errors')
@@ -12,9 +13,30 @@
 
 		<!-- book title -->
 		<div class="form-group">
-			<label for="book" class="col-sm-3 control-label">Book</label>
+			<label for="item_name" class="col-sm-3 control-label">Book Name</label>
 			<div class="col-sm-6">
 				<input type="text" name="item_name" id="book-name" class="form-control">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="item_number" class="col-sm-3 control-label">Number</label>
+			<div class="col-sm-6">
+				<input type="text" name="item_number" id="book-number" class="form-control">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="item_amount" class="col-sm-3 control-label">Price</label>
+			<div class="col-sm-6">
+				<input type="text" name="item_amount" id="book-amount" class="form-control">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="published" class="col-sm-3 control-label">Published Date</label>
+			<div class="col-sm-6">
+				<input type="datetime" name="published" id="book-published" class="form-control">
 			</div>
 		</div>
 
@@ -29,5 +51,50 @@
 	</form>
 </div>
 
+@if ( count( $books ) > 0 )
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Current Books
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped task-table">
+		<thead>
+			<th>Book Name</th><th>&nbsp;</th>
+		</thead>
+		<tbody>
+			@foreach ( $books as $book )
+			<tr>
+				<!-- book title -->
+				<td class="table-text"><div>{{ $book->item_name }}</div></td>
+
+				<!-- edit button for book -->
+				<td>
+					<form action="{{ url('bookedit/' . $book->id) }}" method="POST">
+						{{ csrf_field() }}
+
+						<button type="submit" class="btn btn-primary">
+							<i class="glyphicon glyphicon-pencil"></i> Edit
+						</button>
+					</form>
+				</td>
+
+				<!-- delete button -->
+				<td>
+					<form action="{{ url('book/' . $book->id ) }}" method="POST">
+						{{ csrf_field() }}
+						{{ method_field('DELETE') }}
+
+						<button type="submit" class="btn btn-danger">
+							<i class="glyphicon glyphicon-trash"></i> delete
+						</button>
+					</form>
+				</td>
+			</tr>
+			@endforeach
+		</tbody>
+		</table>
+	</div>
+</div>
+@endif
 <!-- Book application top page: end   -->
 @endsection
