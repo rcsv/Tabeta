@@ -21,7 +21,8 @@
         "fzaninotto/faker": "~1.4",
         "laralib/l5scaffold": "dev-master",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~6.0",
+        "barryvdh/laravel-debugbar": "2.*@dev"
     },
     "autoload": {
         "classmap": [

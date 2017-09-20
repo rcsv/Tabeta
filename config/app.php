@@ -177,7 +177,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Laralib\L5scaffold\GeneratorsServiceProvider::class,
+        // Laralib\L5scaffold\GeneratorsServiceProvider::class,
+
+        // for barryvdh/laravel-debugbar
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -227,6 +230,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Barryvdh/debugbar
+        // if you want to use the facade to log messages, add this to your
+        // facades in app.php.
+        'Debugbar'  => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];
