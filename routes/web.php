@@ -14,25 +14,17 @@ use App\Book ;
 |
 */
 
-Route::get('/', function () {
-    //
-	// top page
-	// --------------------------------------------------------------------
-	return view('books');
+// 1. index + add form
+Route::get('/', 'BooksController@index');
 
-});
+// 2. store data sent by add form
+Route::post('/book', 'BooksController@store');
 
-Route::post('/book', function (Request $request){
+// 3. edit form
+Route::post('/bookedit/{book}', 'BooksController@edit');
 
-	//
-	// just a stab.
-	// --------------------------------------------------------------------
+// 4. update data sent by edit form
+Route::post('/book/update', 'BooksController@update');
 
-});
-
-Route::delete('/book/{id}', function() {
-
-	//
-	// DELETE method
-	// --------------------------------------------------------------------
-});
+// 5. delete form
+Route::delete('/book/{book}', 'BooksController@delete');
