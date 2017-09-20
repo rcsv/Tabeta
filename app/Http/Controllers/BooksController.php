@@ -8,9 +8,16 @@ use Validator ;
 
 class BooksController extends Controller
 {
+
+	public function __construct()
+	{
+		$this->middleware('auth') ;
+	}
+
+
 	// index
 	public function index( /* Request $request */ ) {
-		$books = Book::orderBy('created_at', 'desc')->get() ;
+		$books = Book::orderBy('created_at', 'desc')->paginate( 3 ) ;
 
 		return view('books', [
 			'books' => $books

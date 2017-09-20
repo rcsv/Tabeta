@@ -53,9 +53,9 @@
 
 @if ( count( $books ) > 0 )
 <div class="panel panel-default">
-	<div class="panel-heading">
-		Current Books
-	</div>
+
+	<!-- book list -->
+	<div class="panel-heading"> Current Books </div>
 	<div class="panel-body">
 		<table class="table table-striped task-table">
 		<thead>
@@ -93,6 +93,12 @@
 			@endforeach
 		</tbody>
 		</table>
+
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				{{ $books->links() }}
+			</div>
+		</div>
 	</div>
 </div>
 @endif
