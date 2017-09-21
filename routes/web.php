@@ -14,6 +14,11 @@ use App\Book ;
 |
 */
 
+// uploader test
+Route::get ('/upload', 'UploadController@uploadForm'   ) ;
+Route::post('/upload', 'UploadController@uploadSubmit' ) ;
+
+
 // 1. index + add form
 Route::get('/', 'BooksController@index');
 
