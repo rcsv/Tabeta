@@ -12,9 +12,17 @@
 			<form action="{{ url('/upload') }}" method="POST" enctype="multipart/form-data">
 				{{ csrf_field() }}
 
-				Name <input type="text" name="name" />
-				Image <br />
-				<input type="file" name="photos[]" multiple />
+				Name: 
+				<input type="text" name="name" /> 
+
+				<label for="photos">Image</label>
+				<input
+					id="photos" name="photos[]"	 
+					type="file" class="file" 
+					multiple
+					data-show-upload="false"
+					data-show-caption="true" />
+
 				<button type="submit" class="btn btn-default">
 					<i class="fa fa-plus-square" aria-hidden="true"></i> Save
 				</button>

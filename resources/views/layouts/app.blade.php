@@ -11,9 +11,15 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
+
+    <!-- bootstrap fileinput plugin -->
+    <link href="{{ asset('css/fileinput.min.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -76,9 +82,17 @@
         @yield('content')
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <!-- Bootstrap version 4 -->
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min/js') }}"></script>
 
+    <!-- Additional plugins -->
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <script type="text/javascript" src="{{ asset('js/plugins/piexif.min.js')   }}"></script>
+    <script type="text/javascript" src="{{ asset('js/plugins/sortable.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/plugins/purify.min.js')   }}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/fileinput.min.js')        }} "></script>
 </body>
 </html>
