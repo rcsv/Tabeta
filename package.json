@@ -1,0 +1,43 @@
+{
+  "name": "iateit",
+  "version": "1.0.0",
+  "description": "an web application with Laravel 5.5 study and goal is food share SNS.",
+  "main": "webpack.mix.js",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bootstrap": "^4.0.0-beta",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "vue": "^2.4.4"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "cross": "^1.0.0",
+    "cross-env": "^5.0.5",
+    "laravel-mix": "^1.4.5",
+    "node-sass": "^4.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcsv/Tabeta.git"
+  },
+  "keywords": [
+    "laravel",
+    "php"
+  ],
+  "author": "Tomohiro AWANE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcsv/Tabeta/issues"
+  },
+  "homepage": "https://github.com/rcsv/Tabeta#readme"
+}
